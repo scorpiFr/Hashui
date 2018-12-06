@@ -1,4 +1,4 @@
-Hashui is a nosql key => value service.
+Hashui is a php nosql key => value service.
 1 key = 1 value in 1 file.
 Files are stored in a bunch of repertories and sub-repertories.
 Hashui is made to store middle sized files.
