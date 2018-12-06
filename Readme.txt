@@ -11,12 +11,14 @@ $key = $hui->set($contents);
 print($hui->get($key));
 
 
-Ex2 (if you don't want to store keys) : 
-$contents = @file_get_contents("/etc/hosts");
+Ex2 (if you don't want to store keys) :
+$filePath = '/etc/hosts';
+$contents = @file_get_contents($filePath);
 $userId = 198212;
+$key = "user:$userId;";
+$value = "{filename: $filePath; contents: $contents}";
 $hui = new Hashui("/path/to/rootStorageDir");
-$key = "user:$userId";
-$hui->set($contents, $key);
+$hui->set($value, $key);
 print($hui->get($key));
 
 
